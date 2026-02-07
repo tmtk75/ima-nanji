@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+	--font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+	--font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+html,
+body {
+	@apply bg-stone-50 dark:bg-gray-950 text-gray-800 dark:text-gray-100 antialiased;
+	font-family: var(--font-sans);
+
+	@media (prefers-color-scheme: dark) {
+		color-scheme: dark;
+	}
+}
