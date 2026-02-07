@@ -1,6 +1,7 @@
 {
 	"name": "ima-nanji",
 	"private": true,
+	"packageManager": "pnpm@10.17.0",
 	"type": "module",
 	"scripts": {
 		"build": "react-router build",
