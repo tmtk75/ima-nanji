@@ -1,4 +1,7 @@
-const ALL_TIMEZONES: string[] = Intl.supportedValuesOf("timeZone");
+import { IANA_TIMEZONES } from "./iana-timezones";
+
+const ALL_TIMEZONES: string[] = [...IANA_TIMEZONES];
+const ALL_TIMEZONE_SET = new Set(ALL_TIMEZONES);
 
 export interface TimezoneInfo {
 	id: string;
@@ -52,7 +55,7 @@ function resolveAbbreviation(tzId: string): string {
 }
 
 export function isValidTimezone(tz: string): boolean {
-	return ALL_TIMEZONES.includes(tz);
+	return ALL_TIMEZONE_SET.has(tz);
 }
 
 // Lazily built cache: maps each timezone to its abbreviation and offset
