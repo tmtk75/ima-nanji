@@ -27,6 +27,16 @@ export function Layout({ children }: { children: React.ReactNode }) {
 					href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
 					rel="stylesheet"
 				/>
+				<link
+					rel="icon"
+					type="image/svg+xml"
+					href={`${import.meta.env.BASE_URL}favicon.svg?v=clock1`}
+				/>
+				<link
+					rel="shortcut icon"
+					type="image/svg+xml"
+					href={`${import.meta.env.BASE_URL}favicon.svg?v=clock1`}
+				/>
 				<Meta />
 				<Links />
 			</head>
