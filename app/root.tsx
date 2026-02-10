@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import {
 	isRouteErrorResponse,
 	Links,
@@ -39,6 +40,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
+	useEffect(() => {
+		if (import.meta.env.PROD) {
+			console.info(`[ima-nanji] commit: ${import.meta.env.VITE_COMMIT_SHA}`);
+		}
+	}, []);
+
 	return <Outlet />;
 }
 
